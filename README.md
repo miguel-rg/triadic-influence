@@ -6,7 +6,7 @@ Triadic influence as a proxy for compatibility in social relationships, Ruíz-Ga
 
 the data collected in this work is hosted here:
 
-zenodo....
+[zenodo....](https://zenodo.org/record/7643020#.Y-zP99LMJH5)
 
 it contains the social network (weighted and directed) of the relationships in 13 middle schools in Spain, containing 3395 students and 60566 relationships.
 
