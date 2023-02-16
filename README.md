@@ -22,8 +22,13 @@ For the second part, we include a sample program (sample_program.py) to represen
 The program is meant to be executed in the console where the following parameters may be included: 
 
 ROOT_DIR  --------  Indicate the root directory of the Data folder
+
 TEST_SIZE --------  Indicate the test size for the first treatment of the paper 
+
 TOLERANCE --------  Indicate the tolerance for the fitting of the embedding
+
 N_SIM     --------  Indicate the number of simulations in order to create the statistics
+
 TREATMENT --------  Indicate the treatment to be used
+
 VERBOSE   --------  Indicate the verbose of the process, if 1 then the additional information besides accuracy is included. 
