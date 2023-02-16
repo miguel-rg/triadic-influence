@@ -27,7 +27,7 @@ device = "cpu"
 
 
 parser = argparse.ArgumentParser(description="Introduce program parameters.")
-parser.add_argument('-ROOT_DIR',nargs='?',const="./Coles",default="./Coles", type=str,action="store",help="Root directory for files")
+parser.add_argument('-ROOT_DIR',nargs='?',const="./Data",default="./Data", type=str,action="store",help="Root directory for files")
 parser.add_argument('-TEST_SIZE',nargs='?',const=0.2,default=0.2, type=float,action="store",help="Test size for training")
 parser.add_argument('-TOLERANCE',nargs='?',const=1e-1,default=1e-1,type=float,action="store",help = "Tolerance for the embedding")
 parser.add_argument('-N_SIM',nargs='?',const=2, type=int,default=2,action="store",help = "Number of simulations")
@@ -49,10 +49,6 @@ for key,value in vars(args).items():
 print('-'*20)
 
 
-#ROOT_DIR = "./Coles"
-#TEST_SIZE = 0.2
-#TOLERANCE = 1e-0
-#N_SIM = 3
 
 def import_data(root_dir):
     """Files should be included in a directory /Nodes
@@ -116,14 +112,6 @@ def apply_treatment(treatment=0, *, node_files, edge_files):
     return
 
 
-#def create_test_split(node_files, edge_files, test_size):
-#    train_set = {}
-#    test_set = {}
-#    for file in edge_files:
-#        train_edges, test_edges = train_test_split(edge_files[file], test_size=test_size)
-#        train_set[file] = train_edges
-#        test_set[file] = test_edges
-#    return train_set, test_set
 
 def create_test_split(embedding, test_size,treatment,course_test = -1):
     """
@@ -173,9 +161,7 @@ def extract_embedding(edge_file, tolerance):
         epoch += 1
         pre_value_loss = curr_value_loss
         curr_value_loss = loss
-        # if epoch % 5 == 0:
-        #    print(f'Epoch: {epoch:02d}, with loss: {loss:.4f}')
-    # print(f'The Node2vec algorithm converged at epoch: {epoch:02d}, with loss: {loss:.4f}')
+
 
     z = model()
     # from tensor to numpy
@@ -197,8 +183,7 @@ def balanced_accuracy(y_true, y_pred):
     y_true = y_true.flatten()
     y_pred = y_pred.flatten()
     clases = list(set(y_true))
-    # return sum([sum((y_true == y_pred)&(y_true == clase))/np.count_nonzero(y_true==clase) for clase in clases])/len(clases)
-    # non - pythonic, do it clearly
+
     tpr_total = 0
     for clase in clases:
         tpr = sum((y_true == y_pred) & (y_true == clase)) / np.count_nonzero(y_true == clase)
@@ -256,7 +241,6 @@ prev_time = time.perf_counter()
 # Prepare data
 nodes, edges = import_data("./Coles")
 apply_treatment(TREATMENT,node_files=nodes, edge_files=edges)
-#train_set, test_set = create_test_split(nodes, edges, test_size=0.2)
 print(f"Data Prepared ! Duration: {time.perf_counter() - prev_time:.2f} seconds")
 print('-'*20)
 
