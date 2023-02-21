@@ -10,8 +10,14 @@ https://zenodo.org/record/7647000#.Y-5eDtLMJH4
 
 it contains the social network (weighted and directed) of the relationships in 13 middle schools in Spain, containing 3395 students and 60566 relationships.
 
+This repository contains two code files corresponding to the two main parts of the paper: the definition and use of triadic influence and the use of node emmbedings to train neural networks.
 
-The paper contains two parts corresponding to different parts of the paper: a first one corresponding to the importance of triadic influence to link prediction in social network analysis; and a second one where we use embedding theory. 
+## Triadic influence and statistical analysis of the data
+
+To facilitate reproducibility we have uploaded a Google Colab notebook that should run on the cloud:
+
+
+
 
 
 .....
