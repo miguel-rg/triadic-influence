@@ -2,7 +2,7 @@
 
 This repository contains the scripts that reproduce the results presented in our paper:
 
-Triadic influence as a proxy for compatibility in social relationships, Ruíz-García<sup>*</sup>, M., Ozaita<sup>*</sup>, J., Pereda, M., Alfonso, A., Branas-Garza, P., Cuesta, J. A., and Sánchez, A., Proceedings of the National Academy of Sciences, XXX
+Triadic influence as a proxy for compatibility in social relationships, Ruíz-García<sup>*</sup>, M., Ozaita<sup>*</sup>, J., Pereda, M., Alfonso, A., Branas-Garza, P., Cuesta, J. A., and Sánchez, A., Proceedings of the National Academy of Sciences, 120 (13) e2215041120
 
 the data collected in this work is hosted here:
 
