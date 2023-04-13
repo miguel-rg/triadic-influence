@@ -16,7 +16,7 @@ This repository contains two code files corresponding to the two main parts of t
 
 To facilitate reproducibility we have uploaded a Google Colab notebook that should run on the cloud:
 
-https://github.com/miguel-rg/triadic-influence/blob/main/triadic_influence_data_analysis_and_training_NN.ipynb
+https://github.com/miguel-rg/triadic-influence/blob/main/triadic_influence_data_analysis_and_training_NN_2.ipynb
 
 This notebook automatically downloads the necessary data, and produces several statistical analysis of it. It also computes the triadic influence between students and uses it to train neural networks to predict the sign of the relationships.
 
